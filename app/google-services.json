@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "921605774565",
+    "firebase_url": "https://ders27-19.firebaseio.com",
+    "project_id": "ders27-19",
+    "storage_bucket": "ders27-19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921605774565:android:13aaa4b057411407dfc80c",
+        "android_client_info": {
+          "package_name": "com.example.a27_12_19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921605774565-pnosqs1qhtdgj0g05iuob22ema3m5coh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB31SmnwrRf4bkyeJs06WRmvKeEQAjR14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921605774565-pnosqs1qhtdgj0g05iuob22ema3m5coh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
