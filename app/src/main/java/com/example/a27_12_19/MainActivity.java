@@ -55,14 +55,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 User user = dataSnapshot.getValue(User.class);
-                Toast.makeText(MainActivity.this,user.isim,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                User user = dataSnapshot.getValue(User.class);
-                Toast.makeText(MainActivity.this,user.isim,Toast.LENGTH_SHORT).show();
+                User user = dataSnapshot.getValue(User.class);Toast.makeText(MainActivity.this,"Kayıt Başarılı",Toast.LENGTH_SHORT).show();
             }
 
             @Override
