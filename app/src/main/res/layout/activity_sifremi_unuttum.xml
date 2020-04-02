@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="250dp"
+    tools:context=".SifremiUnuttum">
+
+    <TextView
+        android:id="@+id/sifremiUnuttumYazi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ŞİFRENİZİ SIFIRLAYIN"
+        android:textSize="30dp"
+        android:layout_marginLeft="35dp"
+        />
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/epostaSifreUnuttum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e-posta"
+        android:inputType="textPostalAddress" />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/onayKoduButon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Onay Kodu Gönder"
+        />
+
+</LinearLayout>

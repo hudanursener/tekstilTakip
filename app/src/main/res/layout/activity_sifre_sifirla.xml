@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="200dp"
+    tools:context=".SifreSifirla">
+
+    <TextView
+        android:id="@+id/sifremiUnuttumYazi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ŞİFRENİZİ SIFIRLAYIN"
+        android:textSize="30dp"
+        android:layout_marginLeft="35dp"
+        />
+
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/yeniSifre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Yeni Şifreniz"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/yeniSifreOnay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Yeni Şifreniz Tekrar"
+        android:inputType="textPassword" />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/sifreYenileButon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Şifremi Yenile"
+        />
+
+</LinearLayout>

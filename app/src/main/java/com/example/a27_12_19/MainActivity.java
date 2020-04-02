@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,11 +19,31 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText eposta;
+    private EditText sifre ;
+    private Button giris;
+    private Button sifremiUnuttum;
+    private Button kayitOl;
+
+     private DatabaseReference DataBase;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button KayitButon = findViewById(R.id.KayitOl);
+        KayitButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,kayitActivity.class);
+                startActivity(intent);
+            }
+        });
+
+/*
 
         final EditText Isim = findViewById(R.id.isim);
         final EditText Soyisim = findViewById(R.id.soyISim);
@@ -77,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
+
         });
-    }
-}
+
+*/}}

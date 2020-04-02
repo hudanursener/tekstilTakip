@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KAYIT OL"
+        android:textSize="27dp"
+        android:layout_centerHorizontal="true"></TextView>
+    <LinearLayout
+        android:layout_height="wrap_content"
+    android:layout_marginTop="70dp"
+    android:padding="25dp"
+    android:orientation="vertical"
+        android:layout_width="match_parent">
+    <EditText
+        android:id="@+id/isim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adınız"></EditText>
+    <EditText
+        android:id="@+id/soyISim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Soyadınız"></EditText>
+    <EditText
+        android:id="@+id/firmaAdi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Firma Adı"></EditText>
+    <EditText
+        android:id="@+id/eposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e-posta Adresiniz"></EditText>
+    <EditText
+        android:id="@+id/sifre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Şifreniz"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/kayitButon"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KAYIT OL" />
+
+
+
+</LinearLayout>
+    </RelativeLayout>

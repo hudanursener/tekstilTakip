@@ -1,6 +1,8 @@
 package com.example.a27_12_19;
 
-public class User {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class User extends AppCompatActivity {
 
     public String isim;
     public String soyisim;
@@ -19,6 +21,4 @@ public class User {
         this.eposta = Eposta;
         this.sifre= Sifre;
     }
-
-
 }
