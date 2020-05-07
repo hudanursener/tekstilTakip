@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IsGuncelleme">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10.000 m^2 Halı || Genç Halı"
+        android:textColor="#000000"
+        android:textSize="20dp"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_below="@+id/kumasUzunlugu"
+        android:layout_marginTop="30dp"
+        android:id="@+id/TeslimTarihi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarih:"
+        android:textColor="#3F51B5"
+        android:textSize="20dp"></TextView>
+
+
+        <EditText
+            android:id="@+id/tarih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/TeslimTarihi"
+            android:hint="   ..../..../........"></EditText>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/TeslimTarihi"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#6F000000" />
+
+        <TextView
+        android:layout_below="@id/tarih"
+        android:layout_marginTop="20dp"
+        android:id="@+id/UkumasUzunlugu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Üretilen Kumaş Uzunluğu:"
+        android:textColor="#3F51B5"
+        android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/kUzunluk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/UkumasUzunlugu"
+            android:layout_below="@id/TeslimTarihi"
+            android:layout_marginTop="40dp"
+            android:hint="Kumaş Uzunluk (m)"></EditText>
+
+
+
+
+        <TextView
+            android:layout_below="@id/kUzunluk"
+            android:layout_marginTop="20dp"
+            android:id="@+id/Hİplik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harcanan İplik : "
+            android:textColor="#3F51B5"
+            android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/iplik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Hİplik"
+            android:layout_below="@id/kUzunluk"
+            android:layout_marginTop="5dp"
+            android:hint="İplik (adet)"></EditText>
+
+
+        <Button
+            android:id="@+id/btnKaydet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaydet"
+            android:layout_alignParentBottom="true"
+            android:textSize="20dp">
+
+        </Button>
+
+</RelativeLayout>
+
+
+
+</LinearLayout>
