@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "547049135802",
+    "firebase_url": "https://bitirmeproj.firebaseio.com",
+    "project_id": "bitirmeproj",
+    "storage_bucket": "bitirmeproj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547049135802:android:4e458e6f97855c68d9ac83",
+        "android_client_info": {
+          "package_name": "com.example.tekstiltakip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547049135802-l208302n2f60c6jpmunv718kf94ifg1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_HUp2xk0pq_iiXELXkqv5jKQInUlaDfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547049135802-l208302n2f60c6jpmunv718kf94ifg1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

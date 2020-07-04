@@ -8,9 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SifremiUnuttum extends AppCompatActivity {
 
-    Button onaykodu;
+    Button sifirla;
     EditText eposta;
 
     @Override
@@ -18,14 +20,15 @@ public class SifremiUnuttum extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sifremi_unuttum);
 
-        onaykodu = findViewById(R.id.onayKoduButon);
+        sifirla = findViewById(R.id.sifirla);
         eposta = findViewById(R.id.epostaSifreUnuttum);
-
-        onaykodu.setOnClickListener(new View.OnClickListener() {
+        final String eMail= eposta.getText().toString();
+       final FirebaseAuth mAuth=FirebaseAuth.getInstance();;
+        sifirla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SifremiUnuttum.this,SifreSifirla.class);
-                startActivity(intent);
+                mAuth.sendPasswordResetEmail(eMail);
+
             }
         });
     }

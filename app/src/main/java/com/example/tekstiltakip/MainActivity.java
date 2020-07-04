@@ -15,6 +15,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
     private Button kayit;
     private Button sifreUnuttum;
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         kayit = findViewById(R.id.KayıtOl);
 
@@ -52,12 +57,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        email = findViewById(R.id.eposta);
-        sifre = findViewById(R.id.sifre);
+        email = findViewById(R.id.ePostaGiris);
+        sifre = findViewById(R.id.sifreGiris);
         hatirla = findViewById(R.id.beniHatirla);
         mAuth = FirebaseAuth.getInstance();
         girisyap = findViewById(R.id.giris);
-
 
         girisyap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +79,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Intent intent =new Intent(MainActivity.this,AnaSayfa.class);
-                    startActivity(intent);
+                     String kullaniciId =mAuth.getCurrentUser().getUid();
+                    mDatabase= FirebaseDatabase.getInstance().getReference().child("Kullanicilar").child(kullaniciId);
+                    mDatabase.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            kullanicilar kullanici= new kullanicilar();
+                            kullanici=dataSnapshot.getValue(kullanici.getClass());
+
+                            if (kullanici.getkTuru().equals("üretici")){
+
+                                Intent intent =new Intent(MainActivity.this, AnaSayfa.class);
+                                startActivity(intent);
+                            }
+                            else if(kullanici.getkTuru().equals("iplikçi")) {
+                                Intent intent =new Intent(MainActivity.this, iplikciAnasayfa.class);
+                                startActivity(intent);
+                            }
+                            else if(kullanici.getkTuru().equals("ürün sahibi")) {
+                                Intent intent =new Intent(MainActivity.this, Usahipanasayfa.class);
+                                startActivity(intent);
+                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
                 }
             }
         });

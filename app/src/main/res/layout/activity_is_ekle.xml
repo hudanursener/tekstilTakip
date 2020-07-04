@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="10.000 m^2 Halı || Genç Halı"
         android:textColor="#000000"
-        android:textSize="30dp"></TextView>
+        android:textSize="25dp"></TextView>
 
     <View
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
         android:padding="15dp"
         android:text="ÜRÜN BİLGİSİ"
         android:textColor="#C21C1C"
-        android:textSize="30dp"></TextView>
+        android:textSize="25dp"></TextView>
 
     <View
         android:layout_width="match_parent"
@@ -44,14 +44,14 @@
             android:layout_height="wrap_content"
             android:text="Üretilecek Kumaş Uzunluğu:"
             android:textColor="#3F51B5"
-            android:textSize="20dp"></TextView>
+            android:textSize="15dp"></TextView>
 
         <EditText
             android:id="@+id/kUzunluk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-7dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/kumasUzunlugu"
             android:hint="Kumaş Uzunluk"></EditText>
 
@@ -216,14 +216,12 @@
             android:textSize="25dp"></TextView>
 
 
-
-
-
         <Button
             android:id="@+id/btnKaydet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Kaydet"
+            android:layout_alignParentBottom="true"
             android:textSize="20dp">
 
         </Button>

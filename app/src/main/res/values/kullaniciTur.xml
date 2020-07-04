@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ktur">
+
+        <item>iplikçi</item>
+        <item>üretici</item>
+        <item>"ürün sahibi"</item>
+    </string-array>
+</resources>

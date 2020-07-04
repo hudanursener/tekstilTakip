@@ -12,16 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Profil"
-            android:label="@string/title_activity_profil"></activity>
-        <activity android:name=".isEkle" />
+        <activity android:name=".SiparisBilgileri"></activity>
+        <activity android:name=".ipGuncelle" />
+        <activity android:name=".istekOnay" />
+        <activity android:name=".isEkleIp" />
+        <activity android:name=".siparisVer" />
+        <activity android:name=".Usahipanasayfa" />
+        <activity android:name=".istekler" />
+        <activity android:name=".stokEkle" />
+        <activity android:name=".iplikciAnasayfa" />
+        <activity android:name=".AnaSayfa" />
         <activity android:name=".KayitOl" />
         <activity android:name=".SifreSifirla" />
         <activity android:name=".SifremiUnuttum" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".AnaSayfa" />
-        <activity android:name=".IsGuncelleme">
+        <activity android:name=".IsGuncelleme" />
+        <activity android:name=".isEkle" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
