@@ -30,7 +30,7 @@
         android:id="@+id/sifirla"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sifre sifirla"
+        android:text="E-Posta Gönder"
         />
 
 </LinearLayout>

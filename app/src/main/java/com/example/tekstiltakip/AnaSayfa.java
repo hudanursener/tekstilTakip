@@ -34,7 +34,7 @@ public class AnaSayfa extends AppCompatActivity {
 
         final FirebaseAuth mAuth= FirebaseAuth.getInstance();
         final TextView firmaIsim =  findViewById(R.id.firmaIsim);
-        final Button isEkle = findViewById(R.id.isEkle);
+        final Button iplikİste = findViewById(R.id.iplikİste);
         final ListView listv = findViewById(R.id.listv);
         final String kullaniciId =mAuth.getCurrentUser().getUid();
         final ArrayList<String> arraylist = new ArrayList<>();
@@ -69,7 +69,7 @@ public class AnaSayfa extends AppCompatActivity {
                               String firmaSiparisId = ds.getKey();
                               siparisler firmalar = ds.getValue(siparisler.class);
                               siparisId.add(firmaSiparisId);
-                              arraylist.add(firmalar.getFirma()+" "+firmalar.getOrani()+" " +firmalar.getMiktari()+" "+firmalar.getFiyati()+" "+firmalar.getSon_tarih()+" "+firmalar.durumu);
+                              arraylist.add(firmalar.getFirma()+"\nKumaş Oranı: " +firmalar.getOrani()+"\nÜretilecek Miktar: " +firmalar.getMiktari()+"\nMetrekare Fiyatı: "+firmalar.getFiyati()+"\nTeslim Tarihi: "+firmalar.getSon_tarih()+"\nSon Güncelleme: "+firmalar.durumu);
 
                               listv.setAdapter(listViewAdapter);
 
@@ -99,7 +99,7 @@ public class AnaSayfa extends AppCompatActivity {
             }
         });
 
-        isEkle.setOnClickListener(new View.OnClickListener() {
+        iplikİste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(AnaSayfa.this,isEkleIp.class);

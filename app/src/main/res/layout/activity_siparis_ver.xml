@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="firma secin"
+            android:text="Firma Seçin"
             android:textSize="20sp"/>
         <Spinner
             android:layout_width="match_parent"
@@ -24,30 +24,33 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="kumas orani belirleyin"
+            android:text="Kumas Oranı Belirleyin"
             android:textSize="20sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/oran"/>
+            android:id="@+id/oran"
+            android:hint="1 metre karede % lik oran giriniz"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="miktar belirtin"
+            android:text="Miktar Belirtin"
             android:textSize="20sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/miktar"/>
+            android:id="@+id/miktar"
+            android:hint="Metrekare cinsinden belirtiniz"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="fiyat belirleyin"
+            android:text="Fiyat Belirleyin"
             android:textSize="20sp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/fiyat"/>
+            android:id="@+id/fiyat"
+            android:hint="Metrekare cinsinden belirtiniz"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,13 +59,14 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tarih"/>
+            android:id="@+id/tarih"
+            android:hint="'GG/AA/YYYY'"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="25sp"
-            android:text="onayla"
+            android:text="Onayla"
             android:id="@+id/onay"/>
 
 

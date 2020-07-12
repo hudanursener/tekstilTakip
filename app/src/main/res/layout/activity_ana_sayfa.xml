@@ -31,12 +31,12 @@
         android:layout_weight="8"
         android:id="@+id/listv"/>
     <Button
-        android:id="@+id/isEkle"
+        android:id="@+id/iplikİste"
         android:gravity="center"
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="YENİ İŞ EKLE">
+        android:text="İplik Siparişi Bildir">
     </Button>
 </LinearLayout>
 

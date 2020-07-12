@@ -2,8 +2,8 @@
 <resources>
     <string-array name="ktur">
 
-        <item>iplikçi</item>
-        <item>üretici</item>
-        <item>"ürün sahibi"</item>
+        <item>İplikçi</item>
+        <item>Üretici</item>
+        <item>"Ürün Sahibi"</item>
     </string-array>
 </resources>

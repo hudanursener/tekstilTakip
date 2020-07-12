@@ -23,10 +23,8 @@
         <activity android:name=".iplikciAnasayfa" />
         <activity android:name=".AnaSayfa" />
         <activity android:name=".KayitOl" />
-        <activity android:name=".SifreSifirla" />
+        <activity android:name=".ureticiFirmaSiparis"/>
         <activity android:name=".SifremiUnuttum" />
-        <activity android:name=".IsGuncelleme" />
-        <activity android:name=".isEkle" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

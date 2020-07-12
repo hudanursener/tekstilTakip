@@ -80,7 +80,7 @@ public class KayitOl extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     final String kullaniciId =mAuth.getCurrentUser().getUid();
-                    mDatabase= FirebaseDatabase.getInstance().getReference().child("Kullanicilar").child(kullaniciId);
+                    mDatabase= FirebaseDatabase.getInstance().getReference().child("Kullanicilar").child(kullaniciId); // tablo oluşturup içine attık
                     HashMap<String,String> kullaniciHM = new HashMap<>();
                     kullaniciHM.put("ad",adi);
                     kullaniciHM.put("soyadi",soyadi);

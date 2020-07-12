@@ -3,6 +3,7 @@ package com.example.tekstiltakip;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -47,7 +49,7 @@ public class siparisVer extends AppCompatActivity {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     String kullaniciId = ds.getKey();
                     kullanicilar kullanici = ds.getValue(kullanicilar.class);
-                    if (kullanici.getkTuru().equals("üretici")) {
+                    if (kullanici.getkTuru().equals("Üretici")) {
                         firmaList.add(kullanici.getFirmaAd());
                         firmalar.setAdapter(listViewAdapter);
                         firmaIdList.add(kullaniciId);
@@ -95,6 +97,9 @@ public class siparisVer extends AppCompatActivity {
                 siparis.put("Son_tarih", tarihi);
                 siparis.put("durumu", "bekliyor");
                 mDatabase.setValue(siparis);
+                Toast.makeText(getApplicationContext(),"Sipariş verildi.",Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(siparisVer.this,Usahipanasayfa.class);
+                startActivity(intent);
             }
         });
     }

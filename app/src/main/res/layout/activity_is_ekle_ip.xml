@@ -6,20 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".isEkleIp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ip firmasi secin"
-            android:textSize="25sp"
-            android:layout_gravity="center"/>
-        <Spinner
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="İplik Firması Seçin"
+        android:textSize="25sp" />
+
+    <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/firmaSpn"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="miktar secin"
+        android:text="Miktarı Belirleyin(kg cinsinden)"
         android:textSize="25sp"
         android:layout_gravity="center"/>
     <EditText
@@ -31,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ip turu secin"
+        android:text="İplik Türü Seçin"
         android:textSize="25sp"
         android:layout_gravity="center"/>
     <Spinner
@@ -43,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
-        android:text="toplam fiyat"
+        android:text="Toplam Fiyat"
         android:layout_gravity="center"/>
     <TextView
         android:id="@+id/fiyat"
@@ -55,7 +57,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/onay"
-        android:text="onayla"
+        android:id="@+id/bildir"
+        android:text="Firmaya Bildir"
         android:textSize="25sp"/>
 </LinearLayout>

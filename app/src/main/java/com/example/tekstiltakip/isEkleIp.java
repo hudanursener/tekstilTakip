@@ -3,6 +3,7 @@ package com.example.tekstiltakip;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -38,7 +40,7 @@ public class isEkleIp extends AppCompatActivity {
         final Spinner turSpn = findViewById(R.id.turSpn);
         final EditText miktarEt = findViewById(R.id.miktarEt);
         final TextView fiyat = findViewById(R.id.fiyat);
-        final Button onay = findViewById(R.id.onay);
+        final Button bildir = findViewById(R.id.bildir);
         final ArrayList<String> firmaIdList = new ArrayList<>();
         final ArrayList<String> turIdList = new ArrayList<>();
         final ArrayList<String> firmaList = new ArrayList<>();
@@ -131,9 +133,9 @@ public class isEkleIp extends AppCompatActivity {
                             final stoklar stok = ds2.getValue(stoklar.class);
                             if (turId.equals(kId2)){
 
-                                int sonuc=0;
+                                double sonuc=0;
                                 String miktar =miktarEt.getText().toString();
-                                sonuc=Integer.valueOf( miktar)*Integer.valueOf( stok.getFiyati());
+                                sonuc=Double.valueOf( miktar)* Double.valueOf( stok.getFiyati());
                                 fiyat.setText(sonuc+" ");
                             }
 
@@ -158,15 +160,19 @@ public class isEkleIp extends AppCompatActivity {
             }
         });
 
-        onay.setOnClickListener(new View.OnClickListener() {
+        bildir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String firmaAd = firmaSpn.getSelectedItem().toString();
                 String miktar=miktarEt.getText().toString();
                 String tur = turSpn.getSelectedItem().toString();
                 String fiyati=fiyat.getText().toString();
+                Toast.makeText(getApplicationContext(),"Bildirim Firmaya Gönderildi",Toast.LENGTH_SHORT).show();
+                Intent intent =new Intent(isEkleIp.this, AnaSayfa.class);
+                startActivity(intent);
 
-              String kullaniciId =mAuth.getCurrentUser().getUid();
+
+                String kullaniciId =mAuth.getCurrentUser().getUid();
                 mDatabase= FirebaseDatabase.getInstance().getReference().child("iplikSiparis").child(firmaId).child(kullaniciId).push();
                 HashMap<String,String> ipsiparis = new HashMap<>();
                 ipsiparis.put("firmaAd",firmaAd);

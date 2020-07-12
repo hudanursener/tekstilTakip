@@ -2,11 +2,13 @@ package com.example.tekstiltakip;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -39,6 +41,10 @@ public class stokEkle extends AppCompatActivity {
                 stok.put("miktari",miktari);
                 stok.put("fiyati",fiyati);
                 mDatabase.setValue(stok);
+                Toast.makeText(getApplicationContext(),"İplik Türü Eklendi.",Toast.LENGTH_SHORT).show();
+                Intent intent =new Intent(stokEkle.this, iplikciAnasayfa.class);
+                startActivity(intent);
+
 
             }
         });

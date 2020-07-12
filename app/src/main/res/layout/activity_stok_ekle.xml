@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tür"
+            android:text="İplik Türü"
             android:textColor="#000"
             android:layout_gravity="center"
             android:textSize="25sp"/>
@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="miktar"
+            android:text="Miktar"
             android:textColor="#000"
             android:layout_gravity="center"
             android:textSize="25sp"/>
@@ -38,11 +38,12 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:layout_gravity="center"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:hint="Kilogram cinsinden "/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="fiyat"
+            android:text="Fiyat"
             android:textColor="#000"
             android:layout_gravity="center"
             android:textSize="25sp"/>
@@ -52,12 +53,13 @@
             android:layout_height="wrap_content"
             android:textColor="#000"
             android:layout_gravity="center"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:hint="Kilogram cinsinden "/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ekle"
-            android:text="ekle"
+            android:text="Ekle"
             android:textColor="#000"
             android:textSize="25sp"/>
 

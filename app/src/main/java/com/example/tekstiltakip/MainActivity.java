@@ -87,16 +87,16 @@ public class MainActivity extends AppCompatActivity {
                             kullanicilar kullanici= new kullanicilar();
                             kullanici=dataSnapshot.getValue(kullanici.getClass());
 
-                            if (kullanici.getkTuru().equals("üretici")){
+                            if (kullanici.getkTuru().equals("Üretici")){
 
                                 Intent intent =new Intent(MainActivity.this, AnaSayfa.class);
                                 startActivity(intent);
                             }
-                            else if(kullanici.getkTuru().equals("iplikçi")) {
+                            else if(kullanici.getkTuru().equals("İplikçi")) {
                                 Intent intent =new Intent(MainActivity.this, iplikciAnasayfa.class);
                                 startActivity(intent);
                             }
-                            else if(kullanici.getkTuru().equals("ürün sahibi")) {
+                            else if(kullanici.getkTuru().equals("Ürün Sahibi")) {
                                 Intent intent =new Intent(MainActivity.this, Usahipanasayfa.class);
                                 startActivity(intent);
                             }

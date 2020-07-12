@@ -23,7 +23,7 @@ public class SiparisBilgileri extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_siparis_bilgileri);
-        final String siparisId = getIntent().getExtras().getString("id");
+        final String siparisIdIntent = getIntent().getExtras().getString("id");
         final TextView istenenMiktar =  findViewById(R.id.istenenMiktar);
         final EditText miktarGuncelle = findViewById(R.id.miktarGuncelle);
         Button onay = findViewById(R.id.onay);
@@ -35,13 +35,21 @@ public class SiparisBilgileri extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     String firmaId = ds.getKey();
-                    mDatabase2=FirebaseDatabase.getInstance().getReference().child("siparis").child(firmaId).child(mAuth.getCurrentUser().getUid()).child(siparisId);
+
+                    mDatabase2=FirebaseDatabase.getInstance().getReference().child("siparis").child(firmaId).child(mAuth.getCurrentUser().getUid());
                     mDatabase2.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            siparisler siparis= new siparisler();
-                            siparis=dataSnapshot.getValue(siparis.getClass());
-                            istenenMiktar.setText("istenilen miktar: "+siparis.getMiktari()+" "+siparis.getOrani());
+                            for (DataSnapshot ds2 : dataSnapshot.getChildren()) {
+                                String siparisId = ds2.getKey();
+                                if (siparisId.equals(siparisIdIntent)) {
+                                    System.out.println(siparisId);
+                                    siparisler siparis = ds2.getValue(siparisler.class);
+                                    istenenMiktar.setText("istenilen miktar: " + siparis.getMiktari() + " " + siparis.getOrani());
+                                }
+                            }
+
+
                         }
 
                         @Override
@@ -62,7 +70,7 @@ public class SiparisBilgileri extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String guncelle= miktarGuncelle.getText().toString();
-                mDatabase2.child("durumu").setValue(guncelle);
+                mDatabase2.child(siparisIdIntent).child("durumu").setValue(guncelle);
             }
         });
     }
